@@ -1,2 +1,1 @@
-order = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1357902468'
-print(*sorted(input(), key=order.index), sep='')
+print(*sorted(input(), key=lambda c: (-ord(c) >> 5, c in '02468', c)), sep='')
